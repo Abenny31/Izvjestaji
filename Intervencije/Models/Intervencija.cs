@@ -20,6 +20,7 @@ namespace Intervencije.Models
         public int FkAkcija { get; set; }
        
         public int FkPlaza { get; set; }
+        public int FkKorisnik { get; set; }
 
 
         
