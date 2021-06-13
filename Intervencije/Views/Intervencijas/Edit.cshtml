@@ -1,0 +1,86 @@
+﻿@model Intervencije.Models.Intervencija
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Intervencija</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Datum" class="control-label"></label>
+                <input asp-for="Datum" class="form-control" />
+                <span asp-validation-for="Datum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkUser" class="control-label"></label>
+                <input asp-for="FkUser" class="form-control" />
+                <span asp-validation-for="FkUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkAkcija" class="control-label"></label>
+                <input asp-for="FkAkcija" class="form-control" />
+                <span asp-validation-for="FkAkcija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkPlaza" class="control-label"></label>
+                <input asp-for="FkPlaza" class="form-control" />
+                <span asp-validation-for="FkPlaza" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Hitna" /> @Html.DisplayNameFor(model => model.Hitna)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Policija" /> @Html.DisplayNameFor(model => model.Policija)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Vatrogasci" /> @Html.DisplayNameFor(model => model.Vatrogasci)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImeZrtve" class="control-label"></label>
+                <input asp-for="ImeZrtve" class="form-control" />
+                <span asp-validation-for="ImeZrtve" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrezimeZrtve" class="control-label"></label>
+                <input asp-for="PrezimeZrtve" class="form-control" />
+                <span asp-validation-for="PrezimeZrtve" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GodineZrtve" class="control-label"></label>
+                <input asp-for="GodineZrtve" class="form-control" />
+                <span asp-validation-for="GodineZrtve" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ozljeda" class="control-label"></label>
+                <input asp-for="Ozljeda" class="form-control" />
+                <span asp-validation-for="Ozljeda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpisAkcije" class="control-label"></label>
+                <input asp-for="OpisAkcije" class="form-control" />
+                <span asp-validation-for="OpisAkcije" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

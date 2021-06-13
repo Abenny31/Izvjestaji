@@ -4,14 +4,16 @@ using Intervencije.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Intervencije.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210613091737_trecaMigracija")]
+    partial class trecaMigracija
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,30 +54,6 @@ namespace Intervencije.Data.Migrations
 
                     b.Property<int>("FkUser")
                         .HasColumnType("int");
-
-                    b.Property<int>("GodineZrtve")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Hitna")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("ImeZrtve")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OpisAkcije")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Ozljeda")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Policija")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("PrezimeZrtve")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Vatrogasci")
-                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

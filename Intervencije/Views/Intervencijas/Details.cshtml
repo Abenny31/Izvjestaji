@@ -1,0 +1,90 @@
+﻿@model Intervencije.Models.Intervencija
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Intervencija</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FkUser)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FkUser)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FkAkcija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FkAkcija)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FkPlaza)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FkPlaza)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Hitna)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hitna)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Policija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Policija)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vatrogasci)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vatrogasci)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImeZrtve)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImeZrtve)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrezimeZrtve)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrezimeZrtve)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GodineZrtve)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GodineZrtve)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ozljeda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ozljeda)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OpisAkcije)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OpisAkcije)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
