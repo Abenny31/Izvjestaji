@@ -15,11 +15,10 @@ namespace Intervencije.Data
         public DbSet<Intervencija> DbIntervencija { get; set; }
         public DbSet<Plaza> DbPlaza { get; set; }
         public DbSet<Akcija> DbAkcija { get; set; }
-
         public DbSet<Spasilac> DbSpasilac { get; set; }
-        
-            
-        
+
+
+
 
     }
 }

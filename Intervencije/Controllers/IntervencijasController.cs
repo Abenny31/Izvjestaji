@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Intervencije.Data;
 using Intervencije.Models;
@@ -11,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Intervencije.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class IntervencijasController : Controller
     {
         private readonly ApplicationDbContext _context;
